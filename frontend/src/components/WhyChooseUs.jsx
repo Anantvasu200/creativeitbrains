@@ -1,0 +1,82 @@
+import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
+import { aboutHighlights } from '../data/siteData.js';
+
+export default function WhyChooseUs() {
+  return (
+    <section id="why-choose-us" className="relative overflow-hidden bg-[#070809] px-4 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-12 border-t border-white/10 pt-10 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-5 text-left">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8ee6df]"
+            >
+              Why Choose Us
+            </motion.div>
+            
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mt-4 text-3xl font-semibold leading-tight tracking-tight sm:text-5xl"
+            >
+              Partner with engineers who prioritize business outcomes.
+            </motion.h2>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-6 text-base leading-8 text-white/62 sm:text-lg"
+            >
+              We combine deep technical expertise in artificial intelligence, cloud environments, and front-end user experience with strict project delivery discipline and transparent communication.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-8"
+            >
+              <a
+                className="inline-flex items-center gap-1.5 rounded-lg bg-white px-6 py-3.5 text-sm font-bold text-black transition duration-200 hover:bg-[#dff7f4]"
+                href="#contact"
+              >
+                Discuss Your Requirements
+                <ArrowUpRight size={16} />
+              </a>
+            </motion.div>
+          </div>
+
+          <div className="lg:col-span-7 grid gap-6 sm:grid-cols-2">
+            {aboutHighlights.map(({ icon: Icon, title, text }, index) => (
+              <motion.article
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative rounded-xl border border-white/10 bg-[#0d1012] p-6 text-left transition duration-200 hover:border-white/18 hover:bg-[#111518]"
+                key={title}
+              >
+                <div className="mb-6 grid size-12 place-items-center rounded-lg border border-white/10 bg-white/[0.03] text-[#8ee6df]">
+                  <Icon size={22} />
+                </div>
+                
+                <h3 className="text-lg font-semibold tracking-tight text-white">{title}</h3>
+                
+                <p className="mt-3 text-sm leading-6 text-white/52">{text}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
