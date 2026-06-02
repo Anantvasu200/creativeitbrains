@@ -23,6 +23,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.3.0",
+    "tech-stack-icons": "^3.7.1",
     "vanilla-tilt": "^1.8.1",
     "vite": "^7.0.0"
   }

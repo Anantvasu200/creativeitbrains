@@ -16,7 +16,7 @@ import TechMarquee from './components/TechMarquee.jsx';
 
 export default function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#f7fbff] text-slate-950 relative">
+    <div className="min-h-screen overflow-x-hidden bg-[#090b10] text-white relative">
       <Header />
       <main>
         <Hero />

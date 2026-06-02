@@ -13,9 +13,8 @@ import {
   Cpu,
   GitBranch,
   Lock,
-  Server,
   Activity,
-  ArrowUpRight
+  Megaphone
 } from 'lucide-react';
 
 export const navItems = [
@@ -37,6 +36,18 @@ export const metrics = [
 ];
 
 export const showcaseItems = [
+  {
+    company: 'Digital Marketing',
+    title: 'Performance marketing command center',
+    summary: 'Built a campaign intelligence workspace for SEO, paid media, social content, and lead attribution so growth teams can optimize every channel from one view.',
+    image: '/team-modern.png',
+    accent: 'from-[#00f5e1]/20 to-[#0f6cff]/20',
+    tags: ['SEO', 'Paid Ads', 'Analytics', 'Content Strategy'],
+    stats: [
+      ['68%', 'Higher Qualified Traffic'],
+      ['4.2x', 'Campaign ROI']
+    ]
+  },
   {
     company: 'AI Automation',
     title: 'Intelligent operations platform',
@@ -107,9 +118,9 @@ export const servicesProvided = [
     description: 'Frictionless cross-platform mobile apps for iOS and Android built on clean React Native architectures with offline support.'
   },
   {
-    icon: Server,
-    title: 'Infrastructure Management',
-    description: 'Proactive virtual server maintenance, database performance tuning, backup automation, and high-availability design.'
+    icon: Megaphone,
+    title: 'Digital Marketing',
+    description: 'SEO strategy, paid campaigns, social media funnels, landing pages, analytics tracking, and conversion-focused content systems.'
   },
   {
     icon: Activity,
@@ -214,4 +225,3 @@ export const footerLinks = [
   ['Testimonials', '#testimonials'],
   ['Contact Us', '#contact']
 ];
-
