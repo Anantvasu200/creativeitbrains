@@ -13,8 +13,8 @@ const initialForm = {
   message: ''
 };
 
-const inputClass = 'min-h-12 w-full rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-white text-sm outline-none transition placeholder:text-white/24 focus:border-white/22 focus:ring-4 focus:ring-white/5 focus:bg-white/[0.05]';
-const labelClass = 'grid gap-2 text-xs font-semibold text-white/68 tracking-wider uppercase text-left';
+const inputClass = 'min-h-12 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-950 text-sm outline-none transition placeholder:text-slate-950/24 focus:border-sky-300 focus:ring-4 focus:ring-sky-100 focus:bg-sky-50';
+const labelClass = 'grid gap-2 text-xs font-semibold text-slate-950/68 tracking-wider uppercase text-left';
 
 export default function ContactForm() {
   const [form, setForm] = useState(initialForm);
@@ -49,16 +49,16 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-[#070809] px-4 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
+    <section id="contact" className="relative overflow-hidden bg-[#f7fbff] px-4 py-20 text-slate-950 sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl relative z-10">
-        <div className="grid gap-12 border-t border-white/10 pt-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div className="grid gap-12 border-t border-slate-200 pt-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div className="text-left">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8ee6df]"
+              className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0f6cff]"
             >
               Start a Conversation
             </motion.div>
@@ -78,58 +78,58 @@ export default function ContactForm() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-5 text-base leading-8 text-white/62 sm:text-lg"
+              className="mt-5 text-base leading-8 text-slate-950/62 sm:text-lg"
             >
               Have a cloud migration, custom enterprise software request, or AI automation project? Share details, and our architecture managers will follow up within 24 hours.
             </motion.p>
 
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-4">
-                <span className="grid size-11 place-items-center rounded-lg bg-white/[0.03] text-[#8ee6df] border border-white/10">
+                <span className="grid size-11 place-items-center rounded-lg bg-white text-[#0f6cff] border border-slate-200">
                   <Mail size={18} />
                 </span>
                 <div>
-                  <span className="block text-xs font-semibold text-white/40 uppercase tracking-wider">Email Address</span>
-                  <a href="mailto:info@creativeitbrains.com" className="text-sm font-semibold text-white hover:text-[#8ee6df] transition">
+                  <span className="block text-xs font-semibold text-slate-950/40 uppercase tracking-wider">Email Address</span>
+                  <a href="mailto:info@creativeitbrains.com" className="text-sm font-semibold text-slate-950 hover:text-[#0f6cff] transition">
                     info@creativeitbrains.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <span className="grid size-11 place-items-center rounded-lg bg-white/[0.03] text-[#8ee6df] border border-white/10">
+                <span className="grid size-11 place-items-center rounded-lg bg-white text-[#0f6cff] border border-slate-200">
                   <Phone size={18} />
                 </span>
                 <div>
-                  <span className="block text-xs font-semibold text-white/40 uppercase tracking-wider">Support Line</span>
-                  <span className="text-sm font-semibold text-white/68">Available on request for project partners</span>
+                  <span className="block text-xs font-semibold text-slate-950/40 uppercase tracking-wider">Support Line</span>
+                  <span className="text-sm font-semibold text-slate-950/68">Available on request for project partners</span>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <span className="grid size-11 place-items-center rounded-lg bg-white/[0.03] text-[#8ee6df] border border-white/10">
+                <span className="grid size-11 place-items-center rounded-lg bg-white text-[#0f6cff] border border-slate-200">
                   <MapPin size={18} />
                 </span>
                 <div>
-                  <span className="block text-xs font-semibold text-white/40 uppercase tracking-wider">Global Operations</span>
-                  <span className="text-sm font-semibold text-white/68">India and international remote hubs</span>
+                  <span className="block text-xs font-semibold text-slate-950/40 uppercase tracking-wider">Global Operations</span>
+                  <span className="text-sm font-semibold text-slate-950/68">India and international remote hubs</span>
                 </div>
               </div>
             </div>
 
-            <div className="mt-10 rounded-xl border border-white/10 bg-[#0d1012] p-6">
-              <h4 className="text-sm font-semibold text-white tracking-wide">What happens next?</h4>
-              <ul className="mt-4 space-y-3 text-xs text-white/60 font-medium">
+            <div className="mt-10 rounded-xl border border-slate-200 bg-white p-6">
+              <h4 className="text-sm font-semibold text-slate-950 tracking-wide">What happens next?</h4>
+              <ul className="mt-4 space-y-3 text-xs text-slate-950/60 font-medium">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 size={14} className="text-[#8ee6df] shrink-0" />
+                  <CheckCircle2 size={14} className="text-[#0f6cff] shrink-0" />
                   <span>Discovery & initial consultation call scheduled</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 size={14} className="text-[#8ee6df] shrink-0" />
+                  <CheckCircle2 size={14} className="text-[#0f6cff] shrink-0" />
                   <span>High-level technical solution design proposal draft</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 size={14} className="text-[#8ee6df] shrink-0" />
+                  <CheckCircle2 size={14} className="text-[#0f6cff] shrink-0" />
                   <span>Sprint planning kickoff and developer allocation</span>
                 </li>
               </ul>
@@ -143,7 +143,7 @@ export default function ContactForm() {
             transition={{ duration: 0.5 }}
           >
             <form
-              className="grid gap-5 rounded-xl border border-white/10 bg-[#0d1012] p-6 text-left sm:p-8 lg:p-10"
+              className="grid gap-5 rounded-xl border border-slate-200 bg-white p-6 text-left sm:p-8 lg:p-10"
               onSubmit={submitLead}
             >
               <div className="grid gap-5 md:grid-cols-2">
@@ -242,7 +242,7 @@ export default function ContactForm() {
               </label>
 
               <button
-                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-white py-4 text-sm font-bold text-black transition duration-200 hover:bg-[#dff7f4] disabled:cursor-wait disabled:opacity-70"
+                className="inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-[#0f6cff] py-4 text-sm font-bold text-white transition duration-200 hover:bg-[#005de0] disabled:cursor-wait disabled:opacity-70"
                 type="submit"
                 disabled={status.type === 'loading'}
               >

@@ -3,12 +3,12 @@ import { footerLinks, servicesProvided } from '../data/siteData.js';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#070809] border-t border-white/10 px-4 pt-16 text-white sm:px-6 lg:px-8">
+    <footer className="bg-[#f7fbff] border-t border-slate-200 px-4 pt-16 text-slate-950 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 pb-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1.2fr]">
         {/* Left Column: Logo & Socials */}
         <div className="text-left">
-          <img className="h-8 w-auto rounded-lg border border-white/10 bg-white/[0.03] p-1" src="/logo.png" alt="Creative IT Brains" />
-          <p className="mt-5 max-w-sm text-sm font-medium leading-relaxed text-white/50">
+          <img className="h-9 w-auto object-contain" src="/logo.png" alt="Creative IT Brains" />
+          <p className="mt-5 max-w-sm text-sm font-medium leading-relaxed text-slate-950/50">
             Creative IT Brains engineers advanced software products, robust cloud architectures, intelligent workflow integrations, and strategic marketing campaigns.
           </p>
           <div className="mt-6 flex gap-3">
@@ -44,7 +44,7 @@ export default function Footer() {
               <a
                 key={idx}
                 href={social.href}
-                className="grid size-9 place-items-center rounded-lg border border-white/10 bg-white/[0.03] text-white/55 transition hover:border-white/18 hover:bg-white/[0.07] hover:text-[#8ee6df]"
+                className="grid size-9 place-items-center rounded-lg border border-slate-200 bg-white text-slate-950/55 transition hover:border-sky-200 hover:bg-sky-50 hover:text-[#0f6cff]"
               >
                 {social.icon}
               </a>
@@ -54,10 +54,10 @@ export default function Footer() {
 
         {/* Company Links */}
         <div className="text-left">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Company</h3>
-          <div className="mt-5 grid gap-3 text-sm font-semibold text-white/50">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-950">Company</h3>
+          <div className="mt-5 grid gap-3 text-sm font-semibold text-slate-950/50">
             {footerLinks.map(([label, href]) => (
-              <a className="hover:text-white transition" href={href} key={label}>
+              <a className="hover:text-slate-950 transition" href={href} key={label}>
                 {label}
               </a>
             ))}
@@ -66,10 +66,10 @@ export default function Footer() {
 
         {/* Services List */}
         <div className="text-left">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Services</h3>
-          <div className="mt-5 grid gap-3 text-sm font-semibold text-white/50">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-950">Services</h3>
+          <div className="mt-5 grid gap-3 text-sm font-semibold text-slate-950/50">
             {servicesProvided.slice(0, 5).map((item) => (
-              <a className="hover:text-white transition" href="#services" key={item.title}>
+              <a className="hover:text-slate-950 transition" href="#services" key={item.title}>
                 {item.title}
               </a>
             ))}
@@ -78,33 +78,33 @@ export default function Footer() {
 
         {/* Contact & Newsletter */}
         <div className="text-left">
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Contact & Newsletter</h3>
-          <div className="mt-5 space-y-3 text-sm font-semibold text-white/55">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-950">Contact & Newsletter</h3>
+          <div className="mt-5 space-y-3 text-sm font-semibold text-slate-950/55">
             <span className="flex items-center gap-3">
-              <Mail className="shrink-0 text-[#8ee6df]" size={16} />
+              <Mail className="shrink-0 text-[#0f6cff]" size={16} />
               info@creativeitbrains.com
             </span>
             <span className="flex items-center gap-3">
-              <Phone className="shrink-0 text-[#8ee6df]" size={16} />
+              <Phone className="shrink-0 text-[#0f6cff]" size={16} />
               Available for partners
             </span>
             <span className="flex items-start gap-3">
-              <MapPin className="shrink-0 text-[#8ee6df] mt-0.5" size={16} />
+              <MapPin className="shrink-0 text-[#0f6cff] mt-0.5" size={16} />
               India and global delivery
             </span>
           </div>
 
           <div className="mt-6">
-            <form className="relative flex rounded-lg border border-white/10 bg-white/[0.03] p-1 focus-within:border-white/20" onSubmit={(e) => e.preventDefault()}>
+            <form className="relative flex rounded-lg border border-slate-200 bg-white p-1 focus-within:border-sky-200" onSubmit={(e) => e.preventDefault()}>
               <input
-                className="w-full bg-transparent px-3 py-2 text-xs text-white outline-none placeholder:text-white/20"
+                className="w-full bg-transparent px-3 py-2 text-xs text-slate-950 outline-none placeholder:text-slate-950/20"
                 type="email"
                 placeholder="Subscribe to insights"
                 required
               />
               <button
                 type="submit"
-                className="grid size-8 shrink-0 place-items-center rounded-md bg-white text-black"
+                className="grid size-8 shrink-0 place-items-center rounded-md bg-[#0f6cff] text-white transition hover:bg-[#005de0]"
               >
                 <ArrowRight size={14} />
               </button>
@@ -114,7 +114,7 @@ export default function Footer() {
       </div>
 
       {/* Copy and Meta details */}
-      <div className="mx-auto flex max-w-7xl flex-col gap-3 border-t border-white/5 py-8 text-xs font-semibold text-white/30 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 border-t border-slate-100 py-8 text-xs font-semibold text-slate-950/30 md:flex-row md:items-center md:justify-between">
         <span>© {new Date().getFullYear()} Creative IT Brains. All rights reserved.</span>
         <span>Premium IT solutions, cloud architectures, & marketing systems.</span>
       </div>

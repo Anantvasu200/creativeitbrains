@@ -1,33 +1,34 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import StackIcon from 'tech-stack-icons';
 
 const techCategories = {
   Frontend: [
-    { name: 'React', label: 'RE' },
-    { name: 'TypeScript', label: 'TS' },
-    { name: 'Tailwind CSS', label: 'TW' }
+    { name: 'React', icon: 'react' },
+    { name: 'TypeScript', icon: 'typescript' },
+    { name: 'Tailwind CSS', icon: 'tailwindcss' }
   ],
   Backend: [
-    { name: 'Node.js', label: 'NO' },
-    { name: 'Python', label: 'PY' },
-    { name: 'MongoDB', label: 'MO' },
-    { name: 'Redis', label: 'RD' }
+    { name: 'Node.js', icon: 'nodejs' },
+    { name: 'Python', icon: 'python' },
+    { name: 'MongoDB', icon: 'mongodb' },
+    { name: 'Redis', icon: 'redis' }
   ],
   DevOps: [
-    { name: 'Docker', label: 'DO' },
-    { name: 'Kubernetes', label: 'KU' },
-    { name: 'Terraform', label: 'TF' },
-    { name: 'Git & CI/CD', label: 'CI' }
+    { name: 'Docker', icon: 'docker' },
+    { name: 'Kubernetes', icon: 'kubernetes' },
+    { name: 'Terraform', icon: 'terraform' },
+    { name: 'Git & CI/CD', icon: 'git' }
   ],
   Cloud: [
-    { name: 'AWS EC2', label: 'AW' },
-    { name: 'Google Cloud', label: 'GC' },
-    { name: 'Azure', label: 'AZ' },
-    { name: 'Elasticsearch', label: 'ES' }
+    { name: 'AWS EC2', icon: 'aws' },
+    { name: 'Google Cloud', icon: 'google' },
+    { name: 'Azure', icon: 'azure' },
+    { name: 'Elasticsearch', icon: 'elastic' }
   ],
   'AI & Data': [
-    { name: 'Python', label: 'PY' },
-    { name: 'GPU Core', label: 'GP' }
+    { name: 'Python', icon: 'python' },
+    { name: 'GPU Core', icon: 'nvidia' }
   ]
 };
 
@@ -55,9 +56,9 @@ export default function TechStack() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
-    <section id="tech-stack" className="relative overflow-hidden bg-[#070809] px-4 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
+    <section id="tech-stack" className="relative overflow-hidden bg-[#f7fbff] px-4 py-20 text-slate-950 sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl relative z-10">
-        <div className="grid gap-8 border-t border-white/10 pt-10 lg:grid-cols-12 lg:items-end">
+        <div className="grid gap-8 border-t border-sky-100 pt-10 lg:grid-cols-12 lg:items-end">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +66,7 @@ export default function TechStack() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-7"
           >
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8ee6df]">Modern Ecosystem</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0f6cff]">Modern Ecosystem</span>
             <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">
               A stable stack for scalable product delivery.
             </h2>
@@ -75,27 +76,27 @@ export default function TechStack() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="max-w-xl text-sm leading-7 text-white/58 lg:col-span-5"
+            className="max-w-xl text-sm leading-7 text-slate-600 lg:col-span-5"
           >
             We choose proven frameworks and infrastructure tools that keep systems maintainable after launch.
           </motion.p>
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-2 border-b border-white/10">
+        <div className="mt-12 flex flex-wrap gap-2 border-b border-sky-100">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
               className={`relative cursor-pointer border-b-2 px-4 py-4 text-sm font-semibold transition-colors duration-200 ${
                 activeCategory === category
-                  ? 'border-[#8ee6df] text-white'
-                  : 'text-white/45 hover:text-white'
+                  ? 'border-[#0f6cff] text-slate-950'
+                  : 'text-slate-500 hover:text-slate-950'
               }`}
             >
               {activeCategory === category && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute bottom-[-2px] left-0 right-0 h-[2px] bg-[#8ee6df]"
+                  className="absolute bottom-[-2px] left-0 right-0 h-[2px] bg-[#0f6cff]"
                   transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 />
               )}
@@ -122,12 +123,12 @@ export default function TechStack() {
                   <motion.div
                     key={tool.name}
                     variants={itemVariants}
-                    className="flex flex-col items-center justify-center gap-[10px] rounded-xl border border-white/10 bg-[#0d1012] p-6 transition duration-200 hover:border-white/18 hover:bg-[#111518]"
+                    className="flex flex-col items-center justify-center gap-[10px] rounded-xl border border-sky-100 bg-white p-6 shadow-[0_12px_34px_rgba(15,108,255,0.08)] transition duration-200 hover:-translate-y-1 hover:border-sky-200 hover:bg-sky-50"
                   >
-                    <div className="grid h-11 w-11 place-items-center rounded-lg border border-white/10 bg-white/[0.04] text-sm font-semibold text-[#8ee6df]">
-                      {tool.label}
+                    <div className="grid h-12 w-12 place-items-center rounded-lg border border-sky-100 bg-sky-50 p-2">
+                      <StackIcon name={tool.icon} variant="light" className="size-full" />
                     </div>
-                    <span className="block select-none text-center text-[11px] font-semibold uppercase tracking-wide text-white/62">
+                    <span className="block select-none text-center text-[11px] font-semibold uppercase tracking-wide text-slate-600">
                       {tool.name}
                     </span>
                   </motion.div>

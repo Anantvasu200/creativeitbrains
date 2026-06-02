@@ -143,7 +143,7 @@ function ServiceCard({ service, index }) {
       className="service-card h-full"
     >
       <TiltCard
-        className="group relative flex h-full cursor-pointer flex-col justify-between rounded-xl border border-white/10 bg-[#0d1012] p-6 text-left transition duration-200 hover:border-white/18 hover:bg-[#111518]"
+        className="group relative flex h-full cursor-pointer flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 text-left transition duration-200 hover:border-sky-200 hover:bg-[#eff6ff]"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         style={{
@@ -152,7 +152,7 @@ function ServiceCard({ service, index }) {
       >
         <div>
           <div
-            className="icon-wrap mb-6 grid size-12 place-items-center overflow-hidden rounded-lg border border-white/10 transition-all duration-300"
+            className="icon-wrap mb-6 grid size-12 place-items-center overflow-hidden rounded-lg border border-slate-200 transition-all duration-300"
             style={{
               backgroundColor: bgStyle,
               transform: isHovered ? 'scale(1.04)' : 'scale(1)'
@@ -161,20 +161,20 @@ function ServiceCard({ service, index }) {
             {details.svg(strokeColor)}
           </div>
 
-          <h3 className="text-lg font-semibold tracking-tight text-white">
+          <h3 className="text-lg font-semibold tracking-tight text-slate-950">
             {service.title}
           </h3>
 
-          <p className="mt-3 min-h-[72px] text-sm leading-6 text-white/52">
+          <p className="mt-3 min-h-[72px] text-sm leading-6 text-slate-950/52">
             {service.description}
           </p>
         </div>
 
         <div className="mt-6 flex flex-col gap-4">
-          <span className="tag inline-block self-start rounded-md border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs font-semibold text-white/54">
+          <span className="tag inline-block self-start rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs font-semibold text-slate-950/54">
             {details.tag}
           </span>
-          <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-white/55 transition-colors duration-200 group-hover:text-[#8ee6df]">
+          <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-slate-950/55 transition-colors duration-200 group-hover:text-[#0f6cff]">
             <span>Explore Solution</span>
             <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
           </div>
@@ -186,9 +186,9 @@ function ServiceCard({ service, index }) {
 
 export default function Services() {
   return (
-    <section id="services" className="relative overflow-hidden bg-[#070809] px-4 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
+    <section id="services" className="relative overflow-hidden bg-[#f7fbff] px-4 py-20 text-slate-950 sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl relative z-10">
-        <div className="grid gap-8 border-t border-white/10 pt-10 lg:grid-cols-12 lg:items-end">
+        <div className="grid gap-8 border-t border-slate-200 pt-10 lg:grid-cols-12 lg:items-end">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -196,7 +196,7 @@ export default function Services() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-7"
           >
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8ee6df]">Services</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#0f6cff]">Services</span>
             <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">
               Engineering support across the full product lifecycle.
             </h2>
@@ -206,7 +206,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="max-w-xl text-sm leading-7 text-white/58 lg:col-span-5"
+            className="max-w-xl text-sm leading-7 text-slate-950/58 lg:col-span-5"
           >
             From cloud infrastructure to custom apps and AI automation, the work is scoped around maintainability, performance, and measurable operational value.
           </motion.p>
